@@ -16,7 +16,7 @@ jobs:
         VERSION=${{ github.ref_name }}
         SITE="./public/v${VERSION}"
         mkdir -p "$SITE"
-        files_to_copy=("english" "russia" "index.html")
+        files_to_copy=("en" "ru "index.html")
         for file in "${files_to_copy[@]}"; do
           cp -r "./${file}" "$SITE/"
         done
